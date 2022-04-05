@@ -13,7 +13,6 @@
     left: 0;
     z-index: $zIndex;
     max-width: 100%;
-    padding: 6rem;
     background: $bgColor;
     opacity: 0;
 
@@ -38,15 +37,13 @@
     }
 
     &-closeBtn {
-        position: absolute;
+        position: fixed;
         right: 1rem;
         top: 1rem;
         width: 5rem;
         height: 5rem;
-        outline: 0;
-        border: 0;
-        background-color: transparent;
         cursor: pointer;
+        z-index: 1;
 
         &:before,
         &:after {
@@ -69,17 +66,14 @@
     }
 
     &-content {
-        top: 50%;
-        left: 1.5rem;
-        right: 1.5rem;
+        padding: 6rem 1.5rem 1.5rem 1.5rem;
         position: absolute;
-        transform: translateY(-50%);
     }
 
     &--isOpen {
 
         #{$root}, body {
-            overflow: hidden;
+            overflow-y: auto;
         }
 
         #{$root} {

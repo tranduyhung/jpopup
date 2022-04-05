@@ -6,7 +6,6 @@
   left: 0;
   z-index: 9999;
   max-width: 100%;
-  padding: 6rem;
   background: #fff;
   opacity: 0;
 }
@@ -32,15 +31,13 @@
 }
 
 .jPopup-closeBtn {
-  position: absolute;
+  position: fixed;
   right: 1rem;
   top: 1rem;
   width: 5rem;
   height: 5rem;
-  outline: 0;
-  border: 0;
-  background-color: transparent;
   cursor: pointer;
+  z-index: 1;
 }
 
 .jPopup-closeBtn:before, .jPopup-closeBtn:after {
@@ -62,15 +59,12 @@
 }
 
 .jPopup-content {
-  top: 50%;
-  left: 1.5rem;
-  right: 1.5rem;
+  padding: 6rem 1.5rem 1.5rem 1.5rem;
   position: absolute;
-  transform: translateY(-50%);
 }
 
 .jPopup--isOpen .jPopup, .jPopup--isOpen body {
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .jPopup--isOpen .jPopup {
