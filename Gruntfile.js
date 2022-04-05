@@ -14,7 +14,7 @@ module.exports = function (grunt) {
             options: {
                 configFile: '.eslintrc.json'
             },
-            target: ['<%= settings.srcPath %>js/index.js']
+            target: ['<%= settings.srcPath %>js/jpopup.js']
         },
 
         stylelint: {
@@ -27,8 +27,8 @@ module.exports = function (grunt) {
         babel: {
             dist: {
                 files: {
-                    '<%= settings.distPath %>js/index.js': [
-                        '<%= settings.srcPath %>js/index.js'
+                    '<%= settings.distPath %>js/jpopup.js': [
+                        '<%= settings.srcPath %>js/jpopup.js'
                     ]
                 }
             }
@@ -40,8 +40,8 @@ module.exports = function (grunt) {
                     beautify: false
                 },
                 files: {
-                    '<%= settings.distPath %>js/index.min.js': [
-                        '<%= settings.distPath %>js/index.js'
+                    '<%= settings.distPath %>js/jpopup.min.js': [
+                        '<%= settings.distPath %>js/jpopup.js'
                     ]
                 }
             }
@@ -50,8 +50,8 @@ module.exports = function (grunt) {
         umd: {
             all: {
                 options: {
-                    src: '<%= settings.distPath %>js/index.js',
-                    dest: '<%= settings.distPath %>js/index.js',
+                    src: '<%= settings.distPath %>js/jpopup.js',
+                    dest: '<%= settings.distPath %>js/jpopup.js',
                     objectToExport: '<%= settings.library %>',
                 }
             }
@@ -121,7 +121,7 @@ module.exports = function (grunt) {
                 background: true,
                 singleRun: false,
                 files: [
-                    { src: ['<%= settings.srcPath %>js/index.js'], served: true, included: true, type: 'module' },
+                    { src: ['<%= settings.srcPath %>js/jpopup.js'], served: true, included: true, type: 'module' },
                     { src: ['test/index.js'], served: true, included: true, type: 'module' },
                 ]
             }
@@ -173,7 +173,7 @@ module.exports = function (grunt) {
             },
             karma: {
                 tasks: ['karma:unit:start'],
-                files: ['<%= settings.srcPath %>js/index.js', 'test/index.js']
+                files: ['<%= settings.srcPath %>js/jpopup.js', 'test/jpopup.js']
             }
         }
     });
