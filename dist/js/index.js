@@ -37,7 +37,7 @@
     },
     _render: function _render() {
       $html = document.querySelector('html');
-      document.body.insertAdjacentHTML('beforeend', "<div class=\"jPopup jPopup--".concat(this.options.transition, "\"><button type=\"button\" class=\"jPopup-closeBtn\"></button><div class=\"jPopup-content\">").concat(this.options.content, "</div></div>"));
+      document.body.insertAdjacentHTML('beforeend', "<div class=\"jPopup jPopup--".concat(this.options.transition, "\"><span class=\"jPopup-closeBtn\"></span><div class=\"jPopup-content\">").concat(this.options.content, "</div></div>"));
       this.$el = $html.querySelector('.jPopup');
       this.$closeBtn = $html.querySelector('.jPopup-closeBtn');
       return this;

@@ -24,7 +24,7 @@
             $html = document.querySelector('html');
 
             document.body.insertAdjacentHTML('beforeend',
-                `<div class="jPopup jPopup--${this.options.transition}"><button type="button" class="jPopup-closeBtn"></button><div class="jPopup-content">${this.options.content}</div></div>`
+                `<div class="jPopup jPopup--${this.options.transition}"><span class="jPopup-closeBtn"></span><div class="jPopup-content">${this.options.content}</div></div>`
             );
 
             this.$el = $html.querySelector('.jPopup');
