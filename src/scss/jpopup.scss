@@ -15,6 +15,7 @@
     max-width: 100%;
     background: $bgColor;
     opacity: 0;
+    overflow-y: auto;
 
     &--fade {
         pointer-events: none;
@@ -72,8 +73,8 @@
 
     &--isOpen {
 
-        #{$root}, body {
-            overflow-y: auto;
+        body {
+            overflow: hidden;
         }
 
         #{$root} {

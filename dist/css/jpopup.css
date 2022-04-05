@@ -8,6 +8,7 @@
   max-width: 100%;
   background: #fff;
   opacity: 0;
+  overflow-y: auto;
 }
 
 .jPopup--fade {
@@ -63,8 +64,8 @@
   position: absolute;
 }
 
-.jPopup--isOpen .jPopup, .jPopup--isOpen body {
-  overflow-y: auto;
+.jPopup--isOpen body {
+  overflow: hidden;
 }
 
 .jPopup--isOpen .jPopup {
